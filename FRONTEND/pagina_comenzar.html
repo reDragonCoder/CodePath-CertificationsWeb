@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instrucciones | CodePath</title>
+  <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d90850e71e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- NAV BAR -->
+    <header class="site-header">
+        <div class="logo">
+            <img src="IMAGENES/logo.png" alt="Logo de la empresa" />
+            <div>
+            <h1>CodePath</h1>
+            <span class="slogan">Build your path. Master your code.</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="certificaciones.html">Certificaciones</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Cuenta</a>
+        </nav>
+
+        <div class="menu-usuario">
+            <ul class="menu">
+              <li><a href="login.html" class="verCuenta-btn"><span id="userName"></span></a></li>
+              <li><button id="logoutBtn" class="logout-btn" style="display:none;">Cerrar sesión</button></li>
+              <!-- <li><button id="loginBtn" class="login-menu">Iniciar sesión</button></li> -->
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- HERO DEL EXAMEN -->
+        <section class="exam-hero">
+            <div class="exam-hero-content">
+                <h1>Examen de Certificación C++</h1>
+                <p class="exam-subtitle"> Demuestra tus conocimientos</p>
+                
+                <div class="exam-info-card">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Duración</h3> 
+                            <p>5 minutos</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <div>
+                            <h3>Preguntas</h3>
+                            <p>8 preguntas de opción múltiple</p> 
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Puntuación</h3> 
+                            <p>70% para aprobar</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-scroll"></i>
+                        <div>
+                            <h3>Certificado</h3> 
+                            <p>Descarga tu certificado al finalizar </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exam-instructions">
+                    <h3>Instrucciones:</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-book-bookmark"></i>No se permite el uso de material externo</li>
+                        <li><i class="fa-solid fa-list-check"></i>Revisa todas las preguntas antes de enviar</li>
+                        <li><i class="fa-solid fa-alarm-clock"></i>Tienes 5 minutos para completar el examen</li>
+                        <li><i class="fa-solid fa-download"></i>Las respuestas se guardan automáticamente</li>
+                        <li><i class="fa-solid fa-door-closed"></i>No puedes salir del examen una vez iniciado o ya no podrás intentarlo de nuevo</li>
+                    </ul>
+                </div>
+
+                <div class="exam-actions">
+                    <button id="btnComenzar" class="btn btn-primary btn-large">
+                        <i class="fas fa-play"></i>
+                        Comenzar Examen
+                    </button>
+                    <a href="certificaciones.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a Certificaciones
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© CodePath 2025 | Síguenos en
+            <a href="https://www.instagram.com/newleaf_bookstore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="IMAGENES/instagram-logo.jpg" alt="Instagram" style="width:15px; height:15px; vertical-align:middle; border-radius: 4px;">
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('btnComenzar').addEventListener('click', function() {
+            window.location.href = 'examen.html';
+        });
+    </script>
+    <script src="JS/script3.js"></script>
+</body>
+</html>

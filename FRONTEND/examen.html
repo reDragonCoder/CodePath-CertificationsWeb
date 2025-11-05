@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificación C++ - Examen</title>
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <link rel="stylesheet" href="css/examen.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d90850e71e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <!-- Información del examen -->
+  <section class="exam-header">
+    <h1>Certificación C++ | CodePath</h1>
+    <span id="userName"></span>
+    <br>
+    <span id="fechaActual"></span>
+    <div class="exam-info">
+      <div class="progress-container">
+        <span>Progreso:</span>
+        <div class="progress-bar">
+          <div id="progressBar" class="progress-fill"></div>
+        </div>
+        <span id="progressText">0/8</span>
+      </div>
+      <div class="timer">
+        <i class="fas fa-clock"></i>
+        <span id="time">30:00</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="exam-container">
+    <div id="quizForm" class="quiz">
+      <!-- Contenedor para mostrar una pregunta a la vez -->
+      <div id="progressContainer" style="display: none;">
+        <div id="singleQuestionContainer" style="display: none;">
+          <div class="current-question-indicator" id="questionIndicator">Pregunta 1 de 8</div>
+          <div id="currentQuestion" class="question-card">
+            <!-- La pregunta actual se carga aquí -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor original para cargar todas las preguntas  -->
+      <div id="listaPreguntas" class="question-card">
+        <div class="question-loading">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Cargando preguntas...</p>
+        </div>
+      </div>
+
+      <div class="exam-nav">
+        <button id="prevBtn" class="btn btn-outline">
+          <i class="fas fa-arrow-left"></i>
+          Anterior
+        </button>
+        <button id="nextBtn" class="btn btn-primary">
+          Siguiente
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button id="submitBtn" class="btn btn-danger" style="display: none;">
+          <i class="fas fa-paper-plane"></i>
+          Enviar examen
+        </button>
+      </div>
+    </div>
+
+    <div id="resultado" class="resultado" style="display: none;">
+      <!-- Los resultados se mostrarán aquí -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+        <p>© CodePath 2025 | Síguenos en
+            <a href="https://www.instagram.com/codepath_certs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="IMAGENES/instagram-logo.jpg" alt="Instagram" style="width:15px; height:15px; vertical-align:middle; border-radius: 4px;">
+            </a>
+        </p>
+    </footer>
+
+  <script src="JS/examen.js"></script>
+  <script>
+    // Obtener la fecha actual
+    const hoy = new Date();
+
+    // Formatearla en formato local (ej: 4 de noviembre de 2025)
+    const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormateada = hoy.toLocaleDateString('es-ES', opciones);
+
+    // Insertarla en el span
+    document.getElementById('fechaActual').textContent = fechaFormateada;
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = localStorage.getItem("userName");
+    const userNameEl = document.getElementById("userName");
+
+    if (userNameEl) {
+      userNameEl.textContent = user ? `${user}` : "Invitado";
+    }
+  });
+</script>
+
+</body>
+</html>

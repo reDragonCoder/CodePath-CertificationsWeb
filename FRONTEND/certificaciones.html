@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CodePath - Certificaciones</title>
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <link rel="stylesheet" href="CSS/certs.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="IMAGENES/logo.png" alt="Logo de la empresa" />
+            <div class="title">
+                <h1>CodePath</h1>
+                <span class="slogan">Build your path. Master your code.</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="certificaciones.html" class="active">Certificaciones</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Cuenta</a>
+        </nav>
+
+        <div class="menu-usuario">
+            <ul class="menu">
+              <li><a href="login.html" class="verCuenta-btn"><span id="userName"></span></a></li>
+              <li><button id="logoutBtn" class="logout-btn" style="display:none;">Cerrar sesión</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="certificaciones-container">
+        <h2>Nuestras Certificaciones</h2>
+        <p class="intro">
+            En CodeMaster te ofrecemos certificaciones diseñadas para validar tus habilidades reales como desarrollador.  
+            Solo una certificación está disponible actualmente — ¡elige sabiamente y demuestra tu nivel profesional!
+        </p>
+
+        <div class="cert-list">
+            <!-- 1 Certificación ACTIVA -->
+            <div class="cert-card">
+                <img src="IMAGENES/cpp-cert.jpg" alt="Certificación C++">
+                <h3>Certificación en C++ Advanced Developer</h3>
+                <p>
+                    Domina la programación de alto rendimiento con C++, desarrollando aplicaciones eficientes 
+                    y seguras para software, sistemas y videojuegos.
+                </p>
+                <ul>
+                    <li><strong>Puntuación mínima:</strong> 70%</li>
+                    <li><strong>Duración del examen:</strong> 25 minutos</li>
+                    <li><strong>Costo:</strong> $449.9 MXN</li>
+                </ul>
+                <div class="acciones">
+                    <button class="btn-cert requiere-login" onclick="window.location.href='pago.html'">Pagar</button>
+                    <button class="btn-cert requiere-login btn-examen-cpp btn-disabled" disabled>Iniciar examen</button>
+                </div>
+            </div>
+
+            <!-- 2 Certificación futura -->
+            <div class="cert-card">
+                <img src="IMAGENES/python-cert.jpg" alt="Certificación Python">
+                <h3>Certificación en Python Data Analyst</h3>
+                <p>
+                    Aprende a analizar, visualizar y procesar datos con Python.  
+                    Ideal para aspirantes a científicos de datos o analistas de información.
+                </p>
+                <ul>
+                    <li><strong>Puntuación mínima:</strong> 75%</li>
+                    <li><strong>Duración del examen:</strong> 30 minutos</li>
+                    <li><strong>Costo:</strong> $829.9 MXN</li>
+                </ul>
+                <p class="proximamente">Disponible a partir de <strong>Marzo 2026</strong></p>
+                <div class="acciones">
+                    <button class="btn-cert requiere-login" disabled>Pagar</button>
+                    <button class="btn-cert requiere-login btn-disabled" disabled>Iniciar examen</button>
+                </div>
+            </div>
+
+            <!-- 3 Certificación futura -->
+            <div class="cert-card">
+                <img src="IMAGENES/web-cert.jpg" alt="Certificación Web Dev">
+                <h3>Certificación en Web Full Stack</h3>
+                <p>
+                    Domina el desarrollo web con HTML, CSS y JavaScript para construir aplicaciones completas del lado del cliente y del servidor.
+                </p>
+                <ul>
+                    <li><strong>Puntuación mínima:</strong> 80%</li>
+                    <li><strong>Duración del examen:</strong> 40 minutos</li>
+                    <li><strong>Costo:</strong> $1499.9 MXN</li>
+                </ul>
+                <p class="proximamente">Disponible a partir de <strong>Julio 2026</strong></p>
+                <div class="acciones">
+                    <button class="btn-cert requiere-login" disabled>Pagar</button>
+                    <button class="btn-cert requiere-login btn-disabled" disabled>Iniciar examen</button>
+                </div>
+            </div>
+
+            <!-- 4 Certificación futura -->
+            <div class="cert-card">
+                <img src="IMAGENES/node-cert.jpg" alt="Certificación Node.js">
+                <h3>Certificación en Node.js Backend Developer</h3>
+                <p>
+                    Aprende a crear APIs robustas y seguras con Node.js y Express, utilizando autenticación y buenas prácticas de desarrollo backend.
+                </p>
+                <ul>
+                    <li><strong>Puntuación mínima:</strong> 70%</li>
+                    <li><strong>Duración del examen:</strong> 35 minutos</li>
+                    <li><strong>Costo:</strong> $889.9 MXN</li>
+                </ul>
+                <p class="proximamente">Disponible a partir de <strong>Noviembre 2026</strong></p>
+                <div class="acciones">
+                    <button class="btn-cert requiere-login" disabled>Pagar</button>
+                    <button class="btn-cert requiere-login btn-disabled" disabled>Iniciar examen</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© CodePath 2025 | Síguenos en
+            <a href="https://www.instagram.com/codepath_certs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="IMAGENES/instagram-logo.jpg" alt="Instagram" style="width:15px; height:15px; vertical-align:middle; border-radius: 4px;">
+            </a>
+        </p>
+    </footer>
+
+    <script src="JS/script3.js"></script>
+    <script src="JS/planes_script.js"></script>
+</body>
+</html>

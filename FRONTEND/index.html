@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CodePath | Inicio</title>
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="IMAGENES/logo.png" alt="Logo de la empresa" />
+            <div>
+                <h1>CodePath</h1>
+                <span class="slogan">Build your path. Master your code.</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="certificaciones.html">Certificaciones</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Cuenta</a>
+        </nav>
+
+        <div class="menu-usuario">
+            <ul class="menu">
+              <li><a href="login.html" class="verCuenta-btn"><span id="userName"></span></a></li>
+              <li><button id="logoutBtn" class="logout-btn" style="display:none;">Cerrar sesión</button></li>
+            </ul>
+        </div>
+    </header>
+    
+
+    <main class="container">
+
+        <!-- HERO -->
+        <section class="hero">
+        <div class="hero-text">
+            <h2>Certificaciones técnicas a tu ritmo</h2>
+            <p>Obtén una certificación oficial que avale tus conocimientos en las tecnologías más demandadas por la industria.</p>
+            <a class="btn" href="certificaciones.html">Explorar certificaciones</a>
+        </div>
+        </section>
+
+        <!-- CARACTERÍSTICAS Y BENEFICIOS -->
+        <section class="features">
+            <h2>CodePath te ofrece</h2>
+            <article>
+                <img src="IMAGENES/FEATURES_BG_2.jpeg" alt="Reconocimiento" />
+                <h3>Reconocimiento oficial</h3>
+                <p>Obtén certificados digitales avalados por instituciones reconocidas.</p>
+            </article>
+            <article>
+                <img src="IMAGENES/FEATURES_BG.jpeg" alt="Flexibilidad" />
+                <h3>Aprende a tu ritmo</h3>
+                <p>Elige el momento y lugar ideal para completar tus evaluaciones.</p>
+            </article>
+            <article>
+                <img src="IMAGENES/FEATURES_BG_3.jpeg" alt="Preparación" />
+                <h3>Preparación completa</h3>
+                <p>Accede a guías, exámenes de práctica y recursos para reforzar tus conocimientos.</p>
+            </article>
+            <article>
+                <img src="IMAGENES/FEATURES_BG_4.jpeg" alt="Preparación" />
+                <h3>Acompañamiento continuo</h3>
+                <p>Recibe soporte técnico y académico durante todo tu proceso.</p>
+            </article>
+        </section>
+
+        <!-- ¿POR QUÉ CERTIFICARTE CON NOSOTROS -->
+        <section class="why-certify">
+            <div class="why-content">
+                <h2>¿Por qué certificarte?</h2>
+                <p>
+                Obtener una certificación valida tus conocimientos y habilidades ante el mundo profesional. 
+                Te brinda una ventaja competitiva, demuestra tu compromiso con la excelencia y te abre 
+                puertas a nuevas oportunidades laborales y de crecimiento personal.
+                </p>
+                <a href="#" class="btn">Conoce más</a>
+            </div>
+
+            <div class="why-image">
+                <video autoplay muted loop playsinline>
+                    <source src="IMAGENES/WHY_CERTIFICATE_GIF.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
+        </section>
+
+        <!-- PLANES Y PRECIOS -->
+        <section class="pricing">
+            <h2>Planes de Suscripción</h2>
+            <p class="pricing-subtitle">Elige cómo quieres avanzar en tu formación profesional.</p>
+
+            <div class="pricing-container">
+                <!-- Plan mensual -->
+                <div class="plan-card">
+                    <span class="badge off">0% OFF</span>
+                    <h3>Certificación en C++</h3>
+                    <p class="price">MXN 449.9</p>
+                    <p class="price-strike">MXN 449.9</p>
+                    <a href="pago.html" class="btn btn-outline btn-suscribirme">Suscribirme</a>
+                </div>
+
+                <div class="top-label">Congela tu precio por 1 año</div>
+                <!-- Plan anual -->
+                <div class="plan-card featured">
+                    <span class="badge save">30% OFF</span>
+                    <h3>Paquete DeveloperX</h3>
+                    <p class="price-strike">MXN 3,670</p>
+                    <p class="save-text">Ahorra: MXN 1,100</p>
+                    <p class="price">MXN  215<span>/mes</span></p>
+                    <p class="final">Total final: MXN 2,570</p>
+                    <a href="pago.html" class="btn btn-primary btn-suscribirme">Suscribirme</a>
+                </div>
+            </div>
+
+            <p class="note">*Las certificaciones Python Data Analyst, Web Full Stack y Node.js Backend Developer estarán disponibles próximamente.</p>
+        </section>
+
+        
+        <!-- ¿LISTO PARA CERTIFICARTE? -->
+        <section class="cta">
+        <h3>¿Listo para certificarte?</h3>
+        <a class="btn btn-primary" href="certificaciones.html">Ver certificaciones</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+  <footer class="site-footer">
+        <p>© CodePath 2025 | Síguenos en
+            <a href="https://www.instagram.com/codepath_certs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="IMAGENES/instagram-logo.jpg" alt="Instagram" style="width:15px; height:15px; vertical-align:middle; border-radius: 4px;">
+            </a>
+        </p>
+    </footer>
+
+    <script src="JS/script3.js"></script>
+    <script src="JS/planes_script.js"></script>
+</body>
+</html>

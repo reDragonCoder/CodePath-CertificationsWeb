@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CodePath - Nosotros</title>
+    <link rel="icon" type="image/png" href="IMAGENES/logo.png">
+    <link rel="stylesheet" href="CSS/us.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="IMAGENES/logo.png" alt="Logo de la empresa" />
+            <div class="title">
+                <h1>CodePath</h1>
+                <span class="slogan">Build your path. Master your code.</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="certificaciones.html">Certificaciones</a>
+            <a href="nosotros.html" class="active">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Cuenta</a>
+        </nav>
+
+        <div class="menu-usuario">
+            <ul class="menu">
+              <li><a href="login.html" class="verCuenta-btn"><span id="userName"></span></a></li>
+              <li><button id="logoutBtn" class="logout-btn" style="display:none;">Cerrar sesión</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="nosotros-container">
+        <section class="quienes-somos">
+            <h2>¿Quiénes Somos?</h2>
+            <p>
+                En <strong>CodePath Certifications</strong> somos un equipo apasionado por la tecnología y la enseñanza.
+                Nuestra misión es ayudarte a validar tus habilidades técnicas a través de certificaciones prácticas y actualizadas.
+                Creemos que el conocimiento debe ser accesible, retador y con un propósito real en la industria.
+            </p>
+            <p>
+                Fundada en 2025, nuestra empresa nació con la visión de cerrar la brecha entre el aprendizaje teórico y las habilidades
+                que el mercado laboral realmente necesita. Hoy formamos parte de una comunidad global de desarrolladores que
+                buscan crecer profesionalmente.
+            </p>
+        </section>
+
+        <section class="equipo">
+            <h2>Nuestro Equipo</h2>
+            <div class="instructores">
+                <div class="us-card">
+                    <img src="IMAGENES/instructor1.jpg" alt="Instructor Front">
+                    <h3>Isabel Alvarado</h3>
+                    <p>Especialista en diseño de interfaces modernas y usabilidad web.</p>
+                </div>
+
+                <div class="us-card">
+                    <img src="IMAGENES/instructor2.jpg" alt="Instructor Front">
+                    <h3>Danna Castro</h3>
+                    <p>Desarrolladora frontend enfocada en experiencias interactivas con HTML, CSS y JavaScript.</p>
+                </div>
+
+                <div class="us-card">
+                    <img src="IMAGENES/instructor3.jpg" alt="Instructor Back">
+                    <h3>Fernanda Vela</h3>
+                    <p>Desarrolladora backend centrada en lógica de negocio y optimización de servidores.</p>
+                </div>
+
+                <div class="us-card">
+                    <img src="IMAGENES/instructor4.jpg" alt="Instructor Back">
+                    <h3>César Zuleta</h3>
+                    <p>Ingeniero backend con experiencia en Node.js y gestión de APIs seguras.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="valores">
+            <h2>Nuestros Valores</h2>
+            <ul>
+                <li><strong>Compromiso:</strong> Nos dedicamos a ofrecer certificaciones de calidad, con contenido relevante y actualizado.</li>
+                <li><strong>Transparencia:</strong> Creemos en una comunicación clara con nuestros usuarios y aliados.</li>
+                <li><strong>Innovación:</strong> Adaptamos nuestras certificaciones a las tecnologías emergentes.</li>
+                <li><strong>Comunidad:</strong> Fomentamos el aprendizaje colaborativo entre programadores de todo el mundo.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© CodePath 2025 | Síguenos en
+            <a href="https://www.instagram.com/codepath_certs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="IMAGENES/instagram-logo.jpg" alt="Instagram" style="width:15px; height:15px; vertical-align:middle; border-radius: 4px;">
+            </a>
+        </p>
+    </footer>
+
+     <script src="JS/script3.js"></script>
+</body>
+</html>

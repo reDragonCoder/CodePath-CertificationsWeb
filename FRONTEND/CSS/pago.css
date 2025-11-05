@@ -1,0 +1,435 @@
+/* ======== VARIABLES BASE ======== */
+:root {
+    --primary: #7e4fd7;           /* Morado brillante principal */
+    --primary-dark: #621a98;      /* Morado mas oscuro para hover */
+    --accent: #FF8BFF;            /* Rosa neon de reflejos */
+    --text: #EDEDF7;              /* Texto claro */
+    --text-muted: #A5A5C3;        /* Texto secundario grisaseo */
+    --bg-dark: #0B0B17;           /* Fondo principal oscuro */
+    --bg-section: #14142B;        /* Fondo para secciones */
+    --card-bg: #1D1D38;           /* Fondo de tarjetas */
+    --white: #FFFFFF;             /* Blanco puro */
+    --shadow: 0 10px 25px rgba(162, 112, 255, 0.25); 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, var(--bg-dark), var(--bg-section));
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 25px 20px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+.payment-container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(126, 79, 215, 0.9);
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(126, 79, 215, 0.5);
+}
+
+/* =================== HEADER =================== */
+.payment-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(126, 79, 215, 0.3);
+  background: var(--bg-section);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: translateY(-2px);
+}
+
+
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-area img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(126, 79, 215, 0.3);
+}
+
+/* =================== MAIN CONTENT =================== */
+.payment-main {
+  display: flex;
+  padding: 30px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: var(--bg-section);
+}
+
+/* =================== FORMULARIO =================== */
+.payment-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form h2 {
+  color: var(--text);
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.payment-form p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(126, 79, 215, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(126, 79, 215, 0.4);
+  transform: translateY(-2px);
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.expiry-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.expiry-group input {
+  flex: 1;
+  text-align: center;
+}
+
+.expiry-group span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pay-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(126, 79, 215, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/*Brillo blanco que se desliza de izquierda a derecha*/
+.pay-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /*inica*/
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(90deg, transparent, rgba(216, 208, 208, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(126, 79, 215, 0.6);
+}
+
+.pay-btn:hover::before {
+  left: 100%; /*termina*/
+}
+
+/* =================== TARJETA + RESUMEN =================== */
+.card-preview {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CONTENEDOR DE TARJETA 3D */
+.credit-card-container {
+  width: 100%;
+  max-width: 320px;
+  height: 190px;
+  perspective: 1000px;
+  position: relative;
+}
+
+/* CARAS DE LA TARJETA (FRENTE Y REVERSO) */
+.credit-card-front,
+.credit-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  padding: 25px 20px 20px 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FRENTE DE LA TARJETA */
+.credit-card-front {
+  background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  transform: rotateY(0deg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* REVERSO DE LA TARJETA */
+.credit-card-back {
+  background: linear-gradient(145deg, var(--primary-dark), var(--primary));
+  color: var(--white);
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ELEMENTOS DEL FRENTE */
+.chip {
+  width: 40px;
+  height: 30px;
+  background: url('/FRONTEND/IMAGENES/chip.png') center/cover no-repeat;;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-details {
+  margin-top: 10px;
+}
+
+.card-number {
+  font-size: 1.3rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+
+.value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.card-logo img {
+  position: absolute;
+  bottom: 130px;
+  right: 15px;
+  width: 55px;
+}
+
+/* ELEMENTOS DEL REVERSO */
+.magnetic-strip {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--bg-dark);
+}
+
+.cvv-section {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: var(--text-muted);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: right;
+  min-width: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cvv-label {
+  font-size: 0.7rem;
+  color: #000000;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.cvv-number {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
+}
+
+.back-logo img {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 55px;
+  opacity: 0.8;
+}
+
+/* ANIMACIÓN CUANDO SE VOLTEA  */
+.credit-card-container.flipped .credit-card-front {
+  transform: rotateY(-180deg);
+}
+
+.credit-card-container.flipped .credit-card-back {
+  transform: rotateY(0deg);
+}
+
+.credit-card-front,
+.credit-card-back {
+  transition: transform 0.6s ease;
+}
+
+/* RESUMEN */
+.summary {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 320px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(126, 79, 215, 0.2);
+}
+
+.summary p {
+  color: var(--text);
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  margin-top: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(126, 79, 215, 0.4);
+}
+
+/* =================== ANIMACIONES =================== */
+.pay-btn:disabled { /*simulación de pago*/
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+  background: var(--text-muted);
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 10px rgba(126, 79, 215, 0.8);   
+}
+
+.credit-card-front {
+  box-shadow: var(--shadow), 0 0 30px rgba(126, 79, 215, 0.3);
+}
+
+.credit-card-back {
+  box-shadow: 
+    var(--shadow), 0 0 30px rgba(126, 79, 215, 0.3);
+}
+
+
